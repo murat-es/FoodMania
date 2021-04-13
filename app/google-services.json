@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "869919505356",
+    "project_id": "murat-usta-42916",
+    "storage_bucket": "murat-usta-42916.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869919505356:android:58fffb7d915c994185bb69",
+        "android_client_info": {
+          "package_name": "com.murates.durumcumuratusta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "869919505356-mmim183fesj94lkn8467hj0kulohqqnh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzoRx0S8f1ONl7epZ27W9KkC0CCvduidg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "869919505356-mmim183fesj94lkn8467hj0kulohqqnh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

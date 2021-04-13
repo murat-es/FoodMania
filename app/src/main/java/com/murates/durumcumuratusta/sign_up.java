@@ -3,6 +3,7 @@ package com.murates.durumcumuratusta;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -15,15 +16,20 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class sign_up extends AppCompatActivity {
-    private FirebaseAuth auth;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        auth=FirebaseAuth.getInstance();
+        mAuth=FirebaseAuth.getInstance();
     }
+    public void goSignIn(View view){
+        Intent intent=new Intent(this,sign_in.class);
+        startActivity(intent);
+    }
+
     public void signup(View view){
         EditText editTextName=findViewById(R.id.editTextName);
         String name=editTextName.getText().toString();
@@ -41,12 +47,14 @@ public class sign_up extends AppCompatActivity {
             Toast.makeText(sign_up.this,"Password confirmation does not match!",Toast.LENGTH_SHORT).show();
         }
         else {
-            auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                        FirebaseUser user=auth.getCurrentUser();
+                        FirebaseUser user=mAuth.getCurrentUser();
                         System.out.println(user.getEmail());
+
+
                     }
                     else {
                         Toast.makeText(sign_up.this,task.getException().getMessage(),Toast.LENGTH_SHORT).show();
@@ -54,5 +62,7 @@ public class sign_up extends AppCompatActivity {
                 }
             });
         }
+        Intent intent=new Intent(this,MainActivity.class);
+        startActivity(intent);
     }
 }

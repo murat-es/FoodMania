@@ -15,18 +15,18 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class sign_in extends AppCompatActivity {
-    private FirebaseAuth auth;
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        auth=FirebaseAuth.getInstance();
+        mAuth=FirebaseAuth.getInstance();
     }
     @Override
     protected void onStart(){
         super.onStart();
-        if (auth.getCurrentUser()!=null){
+        if (mAuth.getCurrentUser()!=null){
             Intent mainIntent=new Intent(this,MainActivity.class);
             startActivity(mainIntent);
         }
@@ -47,7 +47,7 @@ public class sign_in extends AppCompatActivity {
 
         final Intent mainIntent=new Intent(this,MainActivity.class);
 
-        auth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
