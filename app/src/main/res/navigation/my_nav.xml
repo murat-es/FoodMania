@@ -8,21 +8,21 @@
     <fragment
         android:id="@+id/Home"
         android:name="com.murates.durumcumuratusta.firstFragment"
-        android:label="fragment_first"
+        android:label="Home"
         tools:layout="@layout/fragment_first" />
     <fragment
         android:id="@+id/Search"
         android:name="com.murates.durumcumuratusta.secondFragment"
-        android:label="fragment_second"
+        android:label="Search Food"
         tools:layout="@layout/fragment_second" />
     <fragment
         android:id="@+id/Basket"
         android:name="com.murates.durumcumuratusta.ThirdFragment"
-        android:label="fragment_third"
+        android:label="My Basket"
         tools:layout="@layout/fragment_third" />
     <fragment
         android:id="@+id/Others"
         android:name="com.murates.durumcumuratusta.fourthFragment"
-        android:label="fragment_fourth"
+        android:label="Others"
         tools:layout="@layout/fragment_fourth" />
 </navigation>

@@ -14,6 +14,9 @@ import android.widget.TextView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
@@ -25,21 +28,32 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView=findViewById(R.id.bottomNavigationView);
         NavController navController= Navigation.findNavController(this,R.id.fragment);
         NavigationUI.setupWithNavController(bottomNavigationView,navController);
-       // AppBarConfiguration appBarConfiguration=AppBarConfiguration()
+
+        Set<Integer> topLevelDestinations = new HashSet<>();
+        topLevelDestinations.add(R.id.Home);
+        topLevelDestinations.add(R.id.Search);
+        topLevelDestinations.add(R.id.Basket);
+        topLevelDestinations.add(R.id.Others);
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(topLevelDestinations).build();
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
         mAuth=FirebaseAuth.getInstance();
 
+
+
     }
+
+
 
 
     @Override
     protected void onStart() {
         super.onStart();
-        //TextView textView=findViewById(R.id.textNameWelcome);
-        //textView.setText("Welcome "+mAuth.getCurrentUser().getEmail());
+        TextView textView=findViewById(R.id.welcomeUser);
+        textView.setText("Welcome "+mAuth.getCurrentUser().getEmail());
         }
 
-        public void logOut(View view){
+        public void logout(View view){
             mAuth.signOut();
             Intent intent=new Intent(this,sign_in.class);
             startActivity(intent);
