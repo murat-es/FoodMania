@@ -42,8 +42,18 @@ public class sign_in extends AppCompatActivity {
         EditText editTextEmail=findViewById(R.id.editTextMail);
         String email=editTextEmail.getText().toString();
 
+        if (email.matches("")) {
+            Toast.makeText(this, "You did not enter a e-mail", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         EditText editTextPassword=findViewById(R.id.editTextPassw);
         String password=editTextPassword.getText().toString();
+
+        if (password.matches("")) {
+            Toast.makeText(this, "You did not enter a password", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         final Intent mainIntent=new Intent(this,MainActivity.class);
 

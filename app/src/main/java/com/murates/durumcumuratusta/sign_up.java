@@ -41,11 +41,28 @@ public class sign_up extends AppCompatActivity {
         String password=editTextPassword.getText().toString();
 
         EditText editTextPasswordAgain=findViewById(R.id.editTextPasswordAgain);
-        String passwordAgain=editTextPassword.getText().toString();
+        String passwordAgain=editTextPasswordAgain.getText().toString();
 
         if(!password.equals(passwordAgain)){
             Toast.makeText(sign_up.this,"Password confirmation does not match!",Toast.LENGTH_SHORT).show();
         }
+        if (name.matches("")) {
+            Toast.makeText(this, "You did not enter a name", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (email.matches("")) {
+            Toast.makeText(this, "You did not enter a e-mail", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (password.matches("")) {
+            Toast.makeText(this, "You did not enter a password", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (passwordAgain.matches("")) {
+            Toast.makeText(this, "You did not enter password confirm", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         else {
             mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override

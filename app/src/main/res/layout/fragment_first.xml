@@ -5,28 +5,130 @@
     android:id="@+id/Home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".firstFragment">
+    tools:context=".firstFragment"
+    android:layout_marginBottom="60dp">
 
-    <TextView
-        android:id="@+id/welcomeUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome"
-        android:textSize="24sp"
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/button_logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="244dp"
-        android:onClick="logout"
-        android:text="Log Out"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent" />
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/welcomeUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="logout"
+                    android:text="Log Out"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.482"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="OnClick" />
+               <LinearLayout
+
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:padding="10dp"
+                   android:background="@color/colorAccent">
+                   <EditText
+                       android:id="@+id/date_input"
+                       android:inputType="none"
+                       android:drawableStart="@drawable/ic_date"
+                       android:drawablePadding="12dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:hint="SELECT DATE"/>
+
+                   <EditText
+                       android:id="@+id/time_input"
+                       android:drawableStart="@drawable/ic_time"
+                       android:drawablePadding="12dp"
+                       android:inputType="none"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:hint="SELECT TIME"/>
+
+                   <EditText
+                       android:drawableStart="@drawable/ic_people"
+                       android:drawablePadding="12dp"
+                       android:id="@+id/table_input"
+
+                       android:inputType="none"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:hint="NUMBER OF PEOPLE"/>
+
+                   <Button
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="MAKE RESERVATION"/>
+               </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="POPULAR"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:paddingTop="12dp"
+                    android:textAlignment="center"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleViewF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="CAMPAIGNS"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:paddingTop="12dp"      />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

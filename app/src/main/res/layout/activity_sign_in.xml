@@ -7,13 +7,38 @@
     tools:context=".sign_in">
 
     <EditText
+        android:id="@+id/editTextMail"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="248dp"
+        android:ems="10"
+
+        android:drawableStart="@drawable/custom_email_icon"
+        android:background="@drawable/custom_input"
+        android:drawablePadding="12dp"
+        android:hint="e-mail"
+        android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
         android:id="@+id/editTextPassw"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="password"
         android:inputType="textPersonName"
+        android:background="@drawable/custom_input"
+        android:password="true"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:drawableStart="@drawable/custom_lock_icon"
+        android:drawablePadding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextMail" />
@@ -23,6 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="signIn"
+
         android:text="SIGN IN"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,18 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextPassw"
         app:layout_constraintVertical_bias="0.156" />
 
-    <EditText
-        android:id="@+id/editTextMail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="248dp"
-        android:ems="10"
-        android:hint="e-mail"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/textView"
