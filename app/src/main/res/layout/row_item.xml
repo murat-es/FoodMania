@@ -41,7 +41,7 @@
 
 
             android:padding="10dp"
-            android:text="Add to Basket"/>
+            android:text="@string/addToBasket"/>
 
     </LinearLayout>
 

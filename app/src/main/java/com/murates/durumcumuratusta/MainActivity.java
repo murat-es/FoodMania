@@ -5,11 +5,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.view.inputmethod.InputMethodManager;
 
 import android.app.DatePickerDialog;
@@ -27,16 +23,13 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashSet;
 import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
-    RecyclerView recyclerView;
-    ArrayList<MainModel> mainModels;
-    MainAdapter mainAdapter;
+
 
     EditText date_in;
     EditText time_in;

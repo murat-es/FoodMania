@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FoodMania</string>
+    <string name="sign">GİRİŞ YAP</string>
+    <string name="hello_blank_fragment">boş</string>
+    <string name="account">Henüz bir hesabınız yok mu?</string>
+    <string name="account2">Yeni bir tane oluşturun</string>
+    <string name="email">e-posta</string>
+    <string name="pass">şifre</string>
+    <string name="signup">ÜYE OL</string>
+    <string name="name">İsim</string>
+    <string name="cpass">şifreyi onayla</string>
+    <string name="account3">Çoktan bir hesabınız var mı?</string>
+    <string name="home">Ana Sayfa</string>
+    <string name="searchFood">Yemek Ara</string>
+    <string name="myBasket">Sepetim</string>
+    <string name="others">Diğer</string>
+    <string name="addToBasket">Sepete Ekle</string>
+    <string name="splash">açılış ekranı</string>
+</resources>

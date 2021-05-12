@@ -3,4 +3,19 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign">SIGN IN</string>
+    <string name="account">Don\'t have an account?</string>
+    <string name="account2">Create new one</string>
+    <string name="account3">Already have an account?</string>
+    <string name="email">e-mail</string>
+    <string name="pass">password</string>
+    <string name="signup">SIGN UP</string>
+    <string name="name">Name</string>
+    <string name="cpass">confirm password</string>
+    <string name="home">Home</string>
+    <string name="searchFood">Search Food</string>
+    <string name="myBasket">My Basket</string>
+    <string name="others">Others</string>
+    <string name="addToBasket">Add to Basket</string>
+    <string name="splash">splash screen</string>
 </resources>
