@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">FoodMania</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="sign">SIGN IN</string>
     <string name="account">Don\'t have an account?</string>
@@ -18,4 +16,20 @@
     <string name="others">Others</string>
     <string name="addToBasket">Add to Basket</string>
     <string name="splash">splash screen</string>
+    <string name="reset">FORGOT MY PASSWORD</string>
+    <string name="reset2">RESET</string>
+    <string name="reset3">Forgot my password</string>
+    <string name="required">Email is required</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="feedback">Feedback</string>
+    <string name="logout">Log Out</string>
+    <string name="support">Support</string>
+    <string name="english">English</string>
+    <string name="turkish">Turkish</string>
+    <string name="change_lang">Change Language</string>
+    <string name="popular">POPULAR</string>
+    <string name="campaigns">CAMPAIGNS</string>
+    <string name="food">food</string>
+    <string name="night">Night Mode</string>
 </resources>

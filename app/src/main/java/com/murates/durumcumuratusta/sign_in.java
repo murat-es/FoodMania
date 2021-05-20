@@ -36,6 +36,12 @@ public class sign_in extends AppCompatActivity {
     public void goToSignup(View view){
         Intent intent=new Intent(this,sign_up.class);
         startActivity(intent);
+        finish();
+    }
+    public void resetPass(View view){
+        Intent intent=new Intent(this,forgetPassword.class);
+        startActivity(intent);
+        finish();
     }
 
     public void signIn(View view){

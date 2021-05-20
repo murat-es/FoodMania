@@ -6,7 +6,7 @@
     <color name="colorPrimaryDark">#AA0000</color>
     <color name="recycleRed">#990000</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="colorOrange">#FFA500</color>
+    <color name="colorOrange">#000</color>
     <color name="colorOrange2">#FFA555</color>
 
 </resources>

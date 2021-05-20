@@ -5,10 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -32,8 +35,14 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.imageView.setImageResource(mainModels.get(position).getFoodsPhoto());
-        holder.textView.setText(mainModels.get(position).foodsName);
+     //   holder.imageView.setImageResource(mainModels.get(position).getFoodsPhoto());
+     //   holder.textView.setText(mainModels.get(position).foodsName);
+        if (mainModels.size() > 0) {
+            Picasso.get().load(mainModels.get(position).getImageLink()).into(holder.imageView);
+            holder.textFood.setText(mainModels.get(position).getFoodsName());
+            holder.textPrice.setText(mainModels.get(position).getFoodsPrice());
+          //  holder.rating.setText(mainModels.get(position).getFoodRating());
+        }
     }
 
     @Override
@@ -43,12 +52,16 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
-        TextView textView;
+        TextView textFood;
+        TextView textPrice;
+        TextView rating;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView=itemView.findViewById(R.id.image_view);
-            textView=itemView.findViewById(R.id.text_view);
+            textFood=itemView.findViewById(R.id.text_view);
+            textPrice=itemView.findViewById(R.id.price);
+            //rating=itemView.findViewById(R.id.ratingFood);
         }
     }
 }

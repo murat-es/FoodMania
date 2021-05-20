@@ -17,4 +17,20 @@
     <string name="others">Diğer</string>
     <string name="addToBasket">Sepete Ekle</string>
     <string name="splash">açılış ekranı</string>
+    <string name="reset">ŞİFREMİ UNUTTUM</string>
+    <string name="reset2">SIFIRLA</string>
+    <string name="reset3">Şifremi unuttum</string>
+    <string name="required">E-posta alanı boş olamaz</string>
+    <string name="profile">Profil</string>
+    <string name="settings">Ayarlar</string>
+    <string name="logout">Çıkış Yap</string>
+    <string name="feedback">Geri Bildirim</string>
+    <string name="support">Yardım</string>
+    <string name="english">İngilize</string>
+    <string name="turkish">Türkçe</string>
+    <string name="change_lang">Dili Değiştir</string>
+    <string name="popular">POPÜLER</string>
+    <string name="campaigns">KAMPANYALAR</string>
+    <string name="food">yemek</string>
+    <string name="night">Gece Modu</string>
 </resources>

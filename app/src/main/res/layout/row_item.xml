@@ -7,39 +7,52 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/colorRed"
+        android:background="@drawable/recycle_shape"
         android:gravity="center"
         android:padding="10dp"
+
+
         android:layout_marginEnd="10dp">
         
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/image_view"
+            android:paddingTop="15dp"
             android:src="@drawable/pizza"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/text_view"
-            android:text="bear"
+            android:text="@string/food"
             android:textSize="20sp"
+            android:textColor="@color/colorWhite"
+
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/price"
+            android:text="$20.00"
+            android:textSize="20sp"
+            android:textColor="@color/colorWhite"
+            android:paddingBottom="10dp"
             android:textStyle="bold"/>
         <RatingBar
+            android:id="@+id/ratingFood"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:numStars="4"
             android:rating="3"
-
+            android:progressTint="@color/colorWhite"
             style="?android:attr/ratingBarStyleSmall"
-
+            android:paddingBottom="10dp"
             />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/mybutton"
-
-
             android:padding="10dp"
             android:text="@string/addToBasket"/>
 
