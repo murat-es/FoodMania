@@ -12,9 +12,10 @@
         android:id="@+id/Text23"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:text="@string/others"
         android:textSize="32sp"
-        android:textColor="#000"
+        android:textColor="@color/textBlack"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +55,9 @@
         android:id="@+id/darkMode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/night" />
+        android:onClick="darkMode"
+        android:text="@string/night"
+        tools:ignore="OnClick" />
 
 
 </LinearLayout>

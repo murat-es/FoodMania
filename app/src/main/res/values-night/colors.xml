@@ -8,5 +8,6 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="colorOrange">#000</color>
     <color name="colorOrange2">#FFA555</color>
+    <color name="textBlack">#FFF</color>
 
 </resources>

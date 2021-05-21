@@ -35,7 +35,8 @@
                     android:id="@+id/welcomeUser"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Welcome"
+                    android:text="@string/welcome"
+                    android:textColor="@color/textBlack"
                     android:textSize="24sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -48,23 +49,25 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/textBlack"
                     android:text="@string/popular"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:paddingTop="12dp"
-                    android:textAlignment="center"/>
+                    />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycleViewF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp" />
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="10dp"/>
 
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
+                    android:textColor="@color/textBlack"
                     android:text="@string/campaigns"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -74,23 +77,37 @@
                     android:id="@+id/recycleView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp" />
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textBlack"
+                    android:text="@string/reservation"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:paddingTop="12dp"
+                    />
 
                 <LinearLayout
 
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
+                    android:layout_marginTop="10sp"
                     android:padding="10dp"
-                    android:background="@color/colorAccent">
+                    android:background="@color/colorPrimaryDark">
                     <EditText
+                        android:paddingTop="20sp"
                         android:id="@+id/date_input"
                         android:inputType="none"
                         android:drawableStart="@drawable/ic_date"
                         android:drawablePadding="12dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="SELECT DATE"/>
+                        android:hint="@string/selectDate"
+                        android:textColorHint="@color/colorWhite"/>
 
                     <EditText
                         android:id="@+id/time_input"
@@ -99,7 +116,8 @@
                         android:inputType="none"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="SELECT TIME"/>
+                        android:textColorHint="@color/colorWhite"
+                        android:hint="@string/selectTime"/>
 
                     <EditText
                         android:drawableStart="@drawable/ic_people"
@@ -109,25 +127,16 @@
                         android:inputType="none"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="NUMBER OF PEOPLE"/>
+                        android:textColorHint="@color/colorWhite"
+                        android:hint="@string/numberOfPeople"/>
 
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="MAKE RESERVATION"/>
+                        android:text="@string/makeReservation"/>
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/button_logout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="logout"
-                    android:text="Log Out"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.482"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:ignore="OnClick" />
+
             </LinearLayout>
 
         </ScrollView>

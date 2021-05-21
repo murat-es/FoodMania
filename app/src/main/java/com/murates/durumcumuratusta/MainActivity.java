@@ -32,10 +32,10 @@ import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
-    private Button btnToggleDark;
 
     EditText date_in;
     EditText time_in;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
         mAuth = FirebaseAuth.getInstance();
-
 
 
 
@@ -99,9 +98,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
 
 
-
-
-
+/*
         date_in = findViewById(R.id.date_input);
         time_in = findViewById(R.id.time_input);
 
@@ -127,15 +124,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        TextView textView = findViewById(R.id.welcomeUser);
+*/
+      /*  TextView textView = findViewById(R.id.welcomeUser);
         int mailName = mAuth.getCurrentUser().getEmail().indexOf("@");
         textView.setText("Welcome " + mAuth.getCurrentUser().getEmail().substring(0, mailName));
+*/
     }
 
     public void logout(View view) {
         mAuth.signOut();
         Intent intent = new Intent(this, sign_in.class);
         startActivity(intent);
+    }
+
+    public void darkMode(View view){
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
     }
 }

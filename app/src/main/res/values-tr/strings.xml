@@ -4,7 +4,7 @@
     <string name="sign">GİRİŞ YAP</string>
     <string name="hello_blank_fragment">boş</string>
     <string name="account">Henüz bir hesabınız yok mu?</string>
-    <string name="account2">Yeni bir tane oluşturun</string>
+    <string name="account2">Üye olun</string>
     <string name="email">e-posta</string>
     <string name="pass">şifre</string>
     <string name="signup">ÜYE OL</string>
@@ -33,4 +33,12 @@
     <string name="campaigns">KAMPANYALAR</string>
     <string name="food">yemek</string>
     <string name="night">Gece Modu</string>
+    <string name="welcome">Hoş geldin</string>
+    <string name="secondfragment">İkinci Kısım</string>
+    <string name="thirdfragment">Üçüncü Kısım</string>
+    <string name="selectDate">Tarihi Seçin</string>
+    <string name="selectTime">Saati Seçin</string>
+    <string name="numberOfPeople">Kişi Sayısı</string>
+    <string name="makeReservation">Rezervasyon Yap</string>
+    <string name="reservation">REZERVASYON</string>
 </resources>

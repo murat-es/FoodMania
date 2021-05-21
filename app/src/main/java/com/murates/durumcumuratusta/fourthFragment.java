@@ -60,6 +60,7 @@ public class fourthFragment extends Fragment {
 
 
         }
+
     }
 
     @Override
@@ -75,13 +76,12 @@ public class fourthFragment extends Fragment {
                     @Override
                     public void onClick(View view)
                     {
-                        AppCompatDelegate
-                                .setDefaultNightMode(
-                                        AppCompatDelegate
-                                                .MODE_NIGHT_YES);
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                     }
                 });
+
         return rootView;
     }
+
 
 }

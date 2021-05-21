@@ -32,4 +32,12 @@
     <string name="campaigns">CAMPAIGNS</string>
     <string name="food">food</string>
     <string name="night">Night Mode</string>
+    <string name="welcome">Welcome</string>
+    <string name="secondfragment">Second Fragment</string>
+    <string name="thirdfragment">Third Fragment</string>
+    <string name="selectDate">Select Date</string>
+    <string name="selectTime">Select Time</string>
+    <string name="numberOfPeople">Number of People</string>
+    <string name="makeReservation">Make Reservation</string>
+    <string name="reservation">RESERVATION</string>
 </resources>

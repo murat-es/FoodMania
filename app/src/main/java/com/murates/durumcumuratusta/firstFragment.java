@@ -10,10 +10,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -39,16 +39,15 @@ public class firstFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    RecyclerView recyclerView;
-    RecyclerView recyclerView2;
-    ArrayList<MainModel> mainModels;
-    ArrayList<MainModel> mainModels2;
-    MainAdapter mainAdapter;
-    MainAdapter mainAdapter2;
-    FirebaseFirestore mFireStore;
+    private RecyclerView recyclerView;
+    private RecyclerView recyclerView2;
+    private ArrayList<MainModel> mainModels;
+    private ArrayList<MainModel> mainModels2;
+    private MainAdapter mainAdapter;
+    private MainAdapter mainAdapter2;
+    private FirebaseFirestore mFireStore;
+    FirebaseAuth mAuth;
 
-
-    LinearLayout linearLayout;
 
 
     public firstFragment() {
@@ -91,25 +90,13 @@ public class firstFragment extends Fragment {
 
 
 
-        // Inflate the layout for this fragment
+
         View rootView=inflater.inflate(R.layout.fragment_first, container, false);
         recyclerView=rootView.findViewById(R.id.recycleViewF);
         mFireStore=FirebaseFirestore.getInstance();
 
 
 
-
-        /*Integer[] foodsPhoto={R.drawable.pizza,R.drawable.anteplahmacun,R.drawable.atolyeburger,R.drawable.beytikebab,R.drawable.beytikebab};
-        String [] foodsName={"pizza","lahmacun","hamburger","iskender","doner"};
-
-        mainModels=new ArrayList<>();
-        for (int i = 0; i <foodsPhoto.length ; i++) {
-
-            MainModel model=new MainModel(foodsPhoto[i],foodsName[i]);
-            mainModels.add(model);
-        }*/
-
-        //----------------------------------------------------------------------
         mainModels=new ArrayList<>();
         recyclerView=recyclerView.findViewById(R.id.recycleViewF);
         mainAdapter=new MainAdapter(getContext(),mainModels);
@@ -136,25 +123,22 @@ public class firstFragment extends Fragment {
             }
         });
 
-        /*RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
-        ((LinearLayoutManager) layoutManager).setOrientation(recyclerView.HORIZONTAL);
-        recyclerView.setLayoutManager(layoutManager);*/
         LinearLayoutManager managerSales = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(managerSales);
         recyclerView.setAdapter(mainAdapter);
 
 
-       // recyclerView.setAdapter(mainAdapter);
+
 
    //2.
-        /*
+
         recyclerView2=rootView.findViewById(R.id.recycleView2);
         mainModels2=new ArrayList<>();
-        recyclerView2=recyclerView.findViewById(R.id.recycleView2);
+        recyclerView2=recyclerView2.findViewById(R.id.recycleView2);
         mainAdapter2=new MainAdapter(getContext(),mainModels2);
         recyclerView2.setHasFixedSize(true);
 
-        CollectionReference collectionReference2 = mFireStore.collection("popularFoods");
+        CollectionReference collectionReference2 = mFireStore.collection("campaigns");
         collectionReference2.addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -177,10 +161,8 @@ public class firstFragment extends Fragment {
         LinearLayoutManager managerSales2 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         recyclerView2.setLayoutManager(managerSales2);
         recyclerView2.setAdapter(mainAdapter2);
-*/
 
-
-
+/*   FİREBASE OLMADAN DRAWABLEDEN ÇEKME
 
         recyclerView2=rootView.findViewById(R.id.recycleView2);
 
@@ -190,23 +172,17 @@ public class firstFragment extends Fragment {
         mainModels2=new ArrayList<>();
         for (int i = 0; i <foods2Photo.length ; i++) {
             MainModel model2=new MainModel(foods2Photo[i],foods2Name[i]);
-
             mainModels2.add(model2);
         }
-
         RecyclerView.LayoutManager layoutManager2 = new LinearLayoutManager(getContext());
         ((LinearLayoutManager) layoutManager2).setOrientation(recyclerView2.HORIZONTAL);
         recyclerView2.setLayoutManager(layoutManager2);
 
-
         mainAdapter2=new MainAdapter(null,mainModels2);
-        recyclerView2.setAdapter(mainAdapter2);
+        recyclerView2.setAdapter(mainAdapter2);*/
+
 
 
         return rootView;
     }
-
-
-
-
 }
