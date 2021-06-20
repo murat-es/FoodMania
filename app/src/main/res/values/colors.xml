@@ -9,5 +9,6 @@
     <color name="colorOrange">#FFA500</color>
     <color name="colorOrange2">#FFA555</color>
     <color name="textBlack">#000</color>
+    <color name="colorGray">#808080</color>
 
 </resources>

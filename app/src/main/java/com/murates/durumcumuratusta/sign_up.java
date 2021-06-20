@@ -14,9 +14,17 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.murates.durumcumuratusta.dto.User;
+
+import java.util.HashMap;
 
 public class sign_up extends AppCompatActivity {
     private FirebaseAuth mAuth;
+
+    private DatabaseReference mReference;
+    private HashMap<String,Object> mData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +32,8 @@ public class sign_up extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
 
         mAuth=FirebaseAuth.getInstance();
+
+
     }
     public void goSignIn(View view){
         Intent intent=new Intent(this,sign_in.class);
@@ -43,8 +53,12 @@ public class sign_up extends AppCompatActivity {
         EditText editTextPasswordAgain=findViewById(R.id.editTextPasswordAgain);
         String passwordAgain=editTextPasswordAgain.getText().toString();
 
+
+        User userInfo=new User(name,email,password);
+
         if(!password.equals(passwordAgain)){
             Toast.makeText(sign_up.this,"Password confirmation does not match!",Toast.LENGTH_SHORT).show();
+            return;
         }
         if (name.matches("")) {
             Toast.makeText(this, "You did not enter a name", Toast.LENGTH_SHORT).show();
@@ -63,15 +77,42 @@ public class sign_up extends AppCompatActivity {
             return;
         }
 
+
         else {
-            mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(sign_up.this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         FirebaseUser user=mAuth.getCurrentUser();
-                        System.out.println(user.getEmail());
+                        mReference= FirebaseDatabase.getInstance().getReference();
+                        mReference.child("users").child(user.getUid()).child("userInfo").setValue(userInfo);
+
+                      /*  Toast.makeText(sign_up.this,
+                                "User created", Toast.LENGTH_SHORT).show();*/
+
+                      /*
+                        mData=new HashMap<>();
+                        mData.put("userName",name);
+                        mData.put("userEMail",email);
+                        mData.put("userPassword",password);
+                        mData.put("userID",user.getUid());
 
 
+
+                        mReference.child("users").child(user.getUid()).setValue(mData)
+                                .addOnCompleteListener(sign_up.this, new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if (task.isSuccessful()){
+                                            Toast.makeText(sign_up.this,"succesfull",Toast.LENGTH_SHORT).show();
+                                        }
+                                        else {
+                                            Toast.makeText(sign_up.this,task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });*/
+
+                        startActivity(new Intent(sign_up.this,MainActivity.class));
                     }
                     else {
                         Toast.makeText(sign_up.this,task.getException().getMessage(),Toast.LENGTH_SHORT).show();
@@ -79,7 +120,6 @@ public class sign_up extends AppCompatActivity {
                 }
             });
         }
-        Intent intent=new Intent(this,MainActivity.class);
-        startActivity(intent);
+
     }
 }

@@ -14,7 +14,7 @@
     <string name="searchFood">Search Food</string>
     <string name="myBasket">My Basket</string>
     <string name="others">Others</string>
-    <string name="addToBasket">Add to Basket</string>
+    <string name="addToBasket">Add to Cart</string>
     <string name="splash">splash screen</string>
     <string name="reset">FORGOT MY PASSWORD</string>
     <string name="reset2">RESET</string>
@@ -24,7 +24,7 @@
     <string name="settings">Settings</string>
     <string name="feedback">Feedback</string>
     <string name="logout">Log Out</string>
-    <string name="support">Support</string>
+    <string name="myReserva">My Reservation</string>
     <string name="english">English</string>
     <string name="turkish">Turkish</string>
     <string name="change_lang">Change Language</string>
@@ -40,4 +40,11 @@
     <string name="numberOfPeople">Number of People</string>
     <string name="makeReservation">Make Reservation</string>
     <string name="reservation">RESERVATION</string>
+    <string name="favorites">My Favorites</string>
+    <string name="orders">My Orders</string>
+    <string name="search2">Search Food…</string>
+    <string name="buy">Buy the</string>
+    <string name="foodLove">Food that you love</string>
+    <string name="categori">Categories</string>
+    <string name="chooseFood">Choose Food</string>
 </resources>

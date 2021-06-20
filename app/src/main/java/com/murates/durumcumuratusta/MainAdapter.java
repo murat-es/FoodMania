@@ -5,8 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -41,6 +43,12 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
             Picasso.get().load(mainModels.get(position).getImageLink()).into(holder.imageView);
             holder.textFood.setText(mainModels.get(position).getFoodsName());
             holder.textPrice.setText(mainModels.get(position).getFoodsPrice());
+            holder.layout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(context,mainModels.get(position).getFoodsName(),Toast.LENGTH_SHORT).show();
+                }
+            });
           //  holder.rating.setText(mainModels.get(position).getFoodRating());
         }
     }
@@ -55,6 +63,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
         TextView textFood;
         TextView textPrice;
         TextView rating;
+        LinearLayout layout;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -62,6 +71,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
             textFood=itemView.findViewById(R.id.text_view);
             textPrice=itemView.findViewById(R.id.price);
             //rating=itemView.findViewById(R.id.ratingFood);
+            layout=itemView.findViewById(R.id.foodLay);
         }
     }
 }

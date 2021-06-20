@@ -41,4 +41,12 @@
     <string name="numberOfPeople">Kişi Sayısı</string>
     <string name="makeReservation">Rezervasyon Yap</string>
     <string name="reservation">REZERVASYON</string>
+    <string name="favorites">Favorilerim</string>
+    <string name="search2">Yemek aratın…</string>
+    <string name="orders">Siparişlerim</string>
+    <string name="myReserva">Rezervasyonlarım</string>
+    <string name="buy">Satın alın</string>
+    <string name="foodLove">Sevdiğiniz yemeği</string>
+    <string name="categori">Kategoriler</string>
+    <string name="chooseFood">Yemek Seçin</string>
 </resources>

@@ -4,6 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
     <LinearLayout
+        android:id="@+id/foodLay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -26,7 +27,7 @@
             android:id="@+id/text_view"
             android:text="@string/food"
             android:textSize="20sp"
-            android:textColor="@color/colorWhite"
+            android:textColor="#000"
 
             android:textStyle="bold"/>
         <TextView
@@ -35,7 +36,7 @@
             android:id="@+id/price"
             android:text="$20.00"
             android:textSize="20sp"
-            android:textColor="@color/colorWhite"
+            android:textColor="#000"
             android:paddingBottom="10dp"
             android:textStyle="bold"/>
         <RatingBar
@@ -44,7 +45,7 @@
             android:layout_height="wrap_content"
             android:numStars="4"
             android:rating="3"
-            android:progressTint="@color/colorWhite"
+            android:progressTint="#000"
             style="?android:attr/ratingBarStyleSmall"
             android:paddingBottom="10dp"
             />

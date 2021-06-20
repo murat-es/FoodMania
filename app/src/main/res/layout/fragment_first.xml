@@ -123,14 +123,14 @@
                         android:drawableStart="@drawable/ic_people"
                         android:drawablePadding="12dp"
                         android:id="@+id/table_input"
-
-                        android:inputType="none"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textColorHint="@color/colorWhite"
                         android:hint="@string/numberOfPeople"/>
 
                     <Button
+                        android:id="@+id/makeReser"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/makeReservation"/>

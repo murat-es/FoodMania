@@ -9,6 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ReservationReser"></activity>
+        <activity android:name=".MyReservation" />
+        <activity android:name=".Profile" />
+        <activity android:name=".OrderPage" />
+        <activity android:name=".MyOrder" />
+        <activity android:name=".FavRecycle" />
+        <activity android:name=".MyFav" />
+        <activity android:name=".MyCart" />
         <activity android:name=".forgetPassword" />
         <activity android:name=".splashScreen">
             <intent-filter>
