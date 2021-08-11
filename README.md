@@ -12,9 +12,5 @@
   * Add to favorites
   * Add to cart
 
-![alt text](https://github.com/murat-es/Foodmania/blob/master/screenshots/signin.png)
-![alt text](https://github.com/murat-es/Foodmania/blob/master/screenshots/signup.png)
-![alt text](https://github.com/murat-es/Foodmania/blob/master/screenshots/home.png)
-![alt text](https://github.com/murat-es/Foodmania/blob/master/screenshots/foods.png)
-![alt text](https://github.com/murat-es/Foodmania/blob/master/screenshots/basket.png)
-![alt text](https://github.com/murat-es/Foodmania/blob/master/screenshots/others.png)
+<img src="https://github.com/murat-es/Foodmania/blob/master/screenshots/signin.png" width="300" height="600"><img src="https://github.com/murat-es/Foodmania/blob/master/screenshots/signup.png" width="300" height="600"><img src="https://github.com/murat-es/Foodmania/blob/master/screenshots/home.png" width="300" height="600">
+<img src="https://github.com/murat-es/Foodmania/blob/master/screenshots/foods.png" width="300" height="600"><img src="https://github.com/murat-es/Foodmania/blob/master/screenshots/basket.png" width="300" height="600"><img src="https://github.com/murat-es/Foodmania/blob/master/screenshots/others.png" width="300" height="600">
